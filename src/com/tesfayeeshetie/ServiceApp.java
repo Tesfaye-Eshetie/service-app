@@ -2,33 +2,38 @@ package com.tesfayeeshetie;
 
 import java.util.Scanner;
 
+import static com.tesfayeeshetie.Music.getMusic;
+import static com.tesfayeeshetie.Television.getShow;
+import static com.tesfayeeshetie.Zipcode.getZip;
+
 public class ServiceApp {
 
     public static void main(String[] args) {
 
-        Zipcode zip = new Zipcode("23238");
-        Music song = new Music("TEDDY-AFRO");
-        Television TV = new Television("atlanta");
-
-        Scanner userInput;
+        Scanner userInput = new Scanner(System.in);
 
         while (true) {
             System.out.print("Cmd> ");
-            userInput = new Scanner(System.in);
             String request = userInput.next();
 
             switch (request) {
                 case "zipcode" -> {
-                    zip.connect();
-                    System.out.println(zip.get());
+                    System.out.println("Inter a zipcode?");
+                    String inputZipcode = userInput.next();
+                    getZip(inputZipcode);
+                    break;
                 }
                 case "television", "tv" -> {
-                    TV.connect();
-                    System.out.println(TV.get());
+                    System.out.println("What show you like to watch today?");
+                    String inputTVShow = userInput.next();
+                    getShow (inputTVShow);
+                    break;
                 }
                 case "music" -> {
-                    song.connect();
-                    System.out.println(song.get());
+                    System.out.println("Inter title of song or artist name to listen to the music?");
+                    String inputTitleOrArtistName = userInput.next();
+                    getMusic (inputTitleOrArtistName);
+                    break;
                 }
                 default -> {
                     System.exit(0);
