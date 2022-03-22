@@ -60,19 +60,19 @@ public class ServiceCommunicator {
              returns a string that captured the output from that service.
        */
     public String get() {
-        String urlString = "";
+        StringBuilder urlString = new StringBuilder();
         String current;
 
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             while ((current = in.readLine()) != null) {
-                urlString += current;
+                urlString.append(current);
             }
         } catch (IOException iox) {
             System.err.println("**Error in get().  Cannot read from URL. [" + iox.getMessage() + "]");
             return (String) null;
         }
-        return urlString;
+        return urlString.toString();
     }
 
     /*
