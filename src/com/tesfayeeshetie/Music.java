@@ -1,5 +1,7 @@
 package com.tesfayeeshetie;
 
+import java.util.Scanner;
+
 public class Music extends ServiceCommunicator{
 
     Music(String songTitleOrArtistName){
@@ -7,7 +9,10 @@ public class Music extends ServiceCommunicator{
     }
 
     public static void main(String[] args) {
-        Music song = new Music("TEDDY-AFRO");
+        Scanner inputMusic = new Scanner(System.in);
+        System.out.println("Inter title of song or artist name to listen to the music?");
+        String inputTitleOrArtistName = inputMusic.next();
+        Music song = new Music(inputTitleOrArtistName);
         song.connect();
         System.out.println(song.get());
     }

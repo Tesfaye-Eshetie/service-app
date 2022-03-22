@@ -6,7 +6,7 @@ public class ServiceApp {
 
     public static void main(String[] args) {
 
-        Zipcode zip = new Zipcode("27560");
+        Zipcode zip = new Zipcode("23238");
         Music song = new Music("TEDDY-AFRO");
         Television TV = new Television("atlanta");
 
@@ -31,6 +31,7 @@ public class ServiceApp {
                     System.out.println(song.get());
                 }
                 default -> {
+                    System.exit(0);
                 }
             }
         }

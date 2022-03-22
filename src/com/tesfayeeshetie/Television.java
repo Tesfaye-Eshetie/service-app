@@ -1,5 +1,7 @@
 package com.tesfayeeshetie;
 
+import java.util.Scanner;
+
 public class Television extends ServiceCommunicator {
 
     Television( String tvShowName) {
@@ -7,7 +9,10 @@ public class Television extends ServiceCommunicator {
     }
 
     public static void main(String[] args) {
-        Television TV = new Television("atlanta");
+        Scanner inputShow = new Scanner(System.in);
+        System.out.println("What show you like to watch today?");
+        String inputTVShow = inputShow.next();
+        Television TV = new Television(inputTVShow);
         TV.connect();
         System.out.println(TV.get());
     }
