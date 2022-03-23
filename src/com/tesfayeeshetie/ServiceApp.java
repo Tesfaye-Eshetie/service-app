@@ -21,23 +21,18 @@ public class ServiceApp {
                     System.out.println("Inter a zipcode?");
                     String inputZipcode = userInput.next();
                     getZip(inputZipcode);
-                    break;
                 }
                 case "television", "tv" -> {
-                    System.out.println("What show you like to watch today?");
+                    System.out.println("What show you would like to watch today?");
                     String inputTVShow = userInput.next();
                     getShow (inputTVShow);
-                    break;
                 }
                 case "music" -> {
                     System.out.println("Inter title of song or artist name to listen to the music?");
                     String inputTitleOrArtistName = userInput.next();
                     getMusic (inputTitleOrArtistName);
-                    break;
                 }
-                default -> {
-                    System.exit(0);
-                }
+                default -> System.exit(0);
             }
         }
 

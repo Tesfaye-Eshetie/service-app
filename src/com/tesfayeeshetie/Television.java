@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Television extends ServiceCommunicator {
 
     Television( String tvShowName) {
-
         super("http://api.tvmaze.com/singlesearch/shows?q=" + tvShowName);
     }
 
