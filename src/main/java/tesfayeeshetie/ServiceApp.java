@@ -1,5 +1,7 @@
 package tesfayeeshetie;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.util.Scanner;
 
 import static tesfayeeshetie.Music.getMusic;
@@ -9,7 +11,7 @@ import static tesfayeeshetie.Zipcode.getZip;
 
 public class ServiceApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
 
         Scanner userInput = new Scanner(System.in);
 
