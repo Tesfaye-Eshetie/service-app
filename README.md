@@ -1,0 +1,2 @@
+# service-app
+A Java project for a corporation that conducts research on entertainment issues such as music, TV shows, and other related themes. The organization must give consumers with a tool that searches for this information quickly and simply using a simple user interface. The app will give an information service application that will collect this information for consumers by utilizing current web services.
