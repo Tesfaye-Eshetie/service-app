@@ -16,7 +16,7 @@ public class ServiceApp {
             System.out.print("Cmd> ");
             String request = userInput.next();
 
-            switch (request) {
+            switch (request.toLowerCase()) {
                 case "zipcode" -> {
                     System.out.println("Inter a zipcode?");
                     String inputZipcode = userInput.next();
